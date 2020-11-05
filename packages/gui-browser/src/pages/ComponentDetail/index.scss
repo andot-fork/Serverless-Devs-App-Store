@@ -1,0 +1,22 @@
+.component-detail {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 32px;
+  background-color: #ffffff;
+  .component-detail-container {
+    width: 1228px;
+    margin: 0 auto;
+    position: relative;
+    .back-icon {
+      position: absolute;
+      left: 0;
+      top: 43px;
+      cursor: pointer;
+      &:hover::before{
+        color: #0000ef;
+      }
+    }
+  }
+}
+
+

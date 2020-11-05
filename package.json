@@ -1,0 +1,26 @@
+{
+  "name": "serverless_app_store",
+  "private": false,
+  "devDependencies": {
+    "@serverless-devs/s-progress-bar": "^0.0.2",
+    "decompress": "^4.2.1",
+    "decompress-unzip": "^4.0.1",
+    "download": "^8.0.0",
+    "lerna": "^3.22.1"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap --npm-client=cnpm",
+    "start": "node scripts/start.js",
+    "clean": "lerna clean",
+    "build": "node scripts/build.js",
+    "publish": "node scripts/publish.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.16",
+    "archiver": "^5.0.2",
+    "axios": "^0.21.0",
+    "concurrently": "^5.3.0",
+    "fs-extra": "^9.0.1",
+    "moment": "^2.29.1"
+  }
+}

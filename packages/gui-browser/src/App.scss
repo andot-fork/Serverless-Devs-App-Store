@@ -1,0 +1,44 @@
+@import '~@alifd/next/dist/next.css';
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  height: 100%;
+}
+.code-block-container {
+  border-radius: 5px;
+  background-color: #000;
+  //background-image: url(https://dev.g.alicdn.com/b-design/portal/0.0.1/static/media/7-2.d6dd5c41.png);
+  background-size: 100% 100%;
+  font-size: 14px;
+  padding: 14px;
+  color: #fff;
+  // background: #232323;
+  span {
+    display: block;
+    font-size: 14px;
+  }
+}
+.a-tag {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0000EF !important;
+}

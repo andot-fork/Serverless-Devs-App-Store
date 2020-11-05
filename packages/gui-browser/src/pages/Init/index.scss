@@ -1,0 +1,163 @@
+
+
+.init-footer {
+  height: 60px;
+  width: 1228px;
+  background: #FFFFFF;
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.10);
+  border-radius: 4px 4px 0 0;
+  background-color: #FFFFFF;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -614px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+
+  .init-btn {
+    height: 36px;
+    width: 106px;
+    background: #E5E5E5;
+    border-radius: 4px;
+    background-color: #E5E5E5;
+  }
+
+  .init-btn.active {
+    background-image: linear-gradient(234deg, rgba(0, 0, 239, 0.10) 0%, #0000EF 100%);
+  }
+  .switch-button {
+    margin-left: 36px;
+  }
+  .switch-word {
+    margin-left: 13px;
+  }
+}
+
+.init-container {
+  width: 1228px;
+  margin: 0 auto;
+  .next-col-fixed-5 {
+    flex: 1 1 !important;
+  }
+
+  .next-icon.next-medium:before {
+    font-size: 12px;
+  }
+
+  .next-input.next-medium {
+    border-radius: 0;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .next-select {
+    .next-input.next-medium {
+      border-radius: 3px;
+      border: 1px solid #C4C6CF;
+    }
+  }
+
+  .next-medium .next-form-item-label {
+    label {
+      word-break: break-all;
+    }
+  }
+}
+
+.init-title {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  margin-top: 35px;
+  margin-bottom: 24px;
+
+  .back-icon {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  .title-span {
+    height: 48px;
+    line-height: 48px;
+    font-size: 38px;
+  }
+}
+
+.init-input-desc {
+  height: 18px;
+  font-family: PingFangSC-Regular;
+  font-size: 10px;
+
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+.base-exit-format {
+  margin-bottom: 60px;
+}
+
+.struct-desc {
+  height: 18px;
+  width: 300px;
+  font-family: PingFangSC-Regular;
+  font-size: 10px;
+  color: #a6a6a6;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 30px !important;
+}
+
+.struct-form-init {
+  margin-bottom: 30px !important;
+}
+
+.base-exit {
+  margin-bottom: 100px !important;
+}
+
+.struct-input {
+  outline: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #a6a6a6 !important;
+  width: 200px !important;
+  margin-right: 20px;
+  margin-top: 30px;
+  border-radius: 0 !important;
+}
+
+.init-data-part {
+  display: flex;
+  flex-direction: row;
+
+  .left-part {
+    width: 50%;
+  }
+
+  .right-part {
+    width: 50%;
+    background-color: #1e1e1e;
+    padding-top: 12px;
+    overflow: hidden;
+  }
+
+  background-color: #fff;
+
+}
+.init-form-group {
+  width: fit-content;
+  display: flex;
+  border: 1px dashed #ccc;
+  position: relative;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.config-render {
+  margin-bottom: 32px;
+
+}
+

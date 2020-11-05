@@ -1,0 +1,30 @@
+.publish-input {
+    outline: none !important;
+    border: none !important;
+    border-bottom: 1px solid #a6a6a6 !important;
+    width: 250px !important;
+    border-radius: 0 !important;
+}
+
+.publish-input:focus {
+    outline: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #1b58f4 !important;
+}
+
+
+.select-part {
+    width: 250px !important;
+}
+
+.next-form-item-label {
+    height: 18px;
+    opacity: 0.87;
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #000000;
+    letter-spacing: 0.4px;
+    line-height: 18px !important;
+}

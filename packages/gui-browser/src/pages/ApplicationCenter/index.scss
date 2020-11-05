@@ -1,0 +1,369 @@
+.application-center {
+  width: 100%;
+  height: auto;
+
+}
+.code-block {
+  background: #1a1a1a;
+  width: 424px;
+  line-height: 40px;
+  font-size: 20px;
+  color: #dadada;
+  letter-spacing: 0;
+  padding: 0 12px;
+}
+.nav-part {
+  background-color: white;
+  padding-bottom: 35px;
+  padding-top: 32px;
+  width: 1228px;
+  margin: 0 auto;
+}
+
+.app-desc {
+  position: relative;
+  height: 48px;
+  font-family: AlibabaPuHuiTi-Light;
+  font-size: 34px;
+  color: #000000;
+  letter-spacing: 0.25px;
+  line-height: 48px;
+
+  .create-component-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    a {
+      color: #0000EF !important;
+      font-size: 12px;
+    }
+
+  }
+}
+
+
+
+.con-style {
+  height: 13.5px;
+  width: 13.5px;
+  background: #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.search-hot {
+  margin: 48px 0 32px;
+  display: flex;
+  .common-part {
+    align-items: center !important;
+  }
+  .user-input  {
+    border: none;
+    height: 36px;
+    input{
+      height: 36px !important;
+      width: 416px;
+      background: #F3F3F3;
+      border-radius: 4px 0 0 4px;
+      background-color: #F3F3F3;
+      border-bottom: none !important;
+    }
+  }
+  .search-button {
+    height: 36px !important;
+    border-left: none !important;
+    width: 82px;
+    background-image: linear-gradient(234deg, rgba(0, 0, 239, 0.10) 0%, #0000EF 100%);
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    margin-right: 20px;
+    font-family: PingFangSC-Medium;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+  }
+}
+
+.common-part {
+  display: flex;
+  align-items: flex-start;
+
+  .search-span {
+    width: 100px;
+    margin-bottom: 0 !important;
+    height: 24px;
+    opacity: 0.87;
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #595959;
+    letter-spacing: 0.37px;
+    text-align: left;
+    line-height: 24px;
+  }
+
+  .hot-search {
+    width: 60px;
+    height: 24px;
+    opacity: 0.87;
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #595959;
+    letter-spacing: 0.37px;
+    text-align: left;
+    line-height: 24px;
+    margin: 0;
+  }
+
+}
+
+
+
+.button-name {
+  color: #FFFFFF;
+}
+
+.search-list {
+  width: 1128px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 8px;
+}
+
+
+
+
+
+
+.hot-item {
+  height: 24px;
+  opacity: 0.87;
+  font-family: PingFangSC-Regular;
+  font-size: 13px;
+  color: #000000 !important;
+  letter-spacing: 0.37px;
+  text-align: left;
+  line-height: 24px;
+  margin-right: 20px;
+  &.active {
+    color: #0000EF !important;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.package-type {
+  padding-bottom: 35px;
+}
+
+.card-cmp {
+  width: 396px;
+  height: 220px;
+  // background-image: url('../../assets/aliyun.png');
+  // background-color: #fe6a00;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  margin-right: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.content-detail {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.first-auth {
+  margin-top: 32px;
+}
+
+.auth-icon {
+  height: 10px;
+}
+
+.auth-name {
+  height: 20px;
+  width: 323px;
+  opacity: 0.87;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #555555;
+  letter-spacing: 0.4px;
+  text-align: left;
+  line-height: 20px;
+  margin-left: 4px;
+}
+
+.card-dev {
+  height: 20px;
+  width: 348px;
+  opacity: 0.87;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #555555;
+  letter-spacing: 0.4px;
+  text-align: left;
+  line-height: 20px;
+}
+
+.card-title {
+  height: 25px;
+  font-family: HelveticaNeue-Medium;
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0.15px;
+  line-height: 25px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  a {
+    color: #000000 !important;
+    &:hover {
+      color: #5584ff !important;
+    }
+  }
+}
+
+.card-desc {
+  height: 40px;
+  width: 348px;
+  opacity: 0.87;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #000000;
+  letter-spacing: 0.4px;
+  text-align: left;
+  line-height: 20px;
+  margin-bottom: 32px;
+}
+
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  .card-tag {
+    color: #ff6a00;
+  }
+}
+
+.card-download {
+  height: 20px;
+  width: 29px;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #A6A6A6;
+  letter-spacing: 0.4px;
+  text-align: left;
+  line-height: 20px;
+}
+
+.card-span {
+  color: #A6A6A6;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 20px;
+}
+
+.tag-icon {
+  height: 10px;
+  width: 20px;
+}
+
+.download-icon {
+  width: 11.2px;
+  height: 11.2px;
+}
+
+.card-type {
+  height: 20px;
+  width: 25px;
+  opacity: 0.87;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #555555;
+  letter-spacing: 0.4px;
+  text-align: left;
+  line-height: 20px;
+
+}
+
+.deploy-name {
+  height: 32px;
+  width: 82px;
+  background-image: linear-gradient(234deg, rgba(0, 0, 239, 0.10) 0%, #0000EF 100%);
+  border-radius: 4px !important;
+  float: right;
+  padding-bottom: 100px;
+  position: relative;
+  bottom: 26px;
+  color: #fff !important;
+}
+
+.card-part {
+  width: 1248px;
+  margin: 0 auto;
+}
+
+.app-number {
+  margin-top: 20px;
+  height: 24px;
+  opacity: 0.87;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #595959;
+  letter-spacing: 0.34px;
+  text-align: left;
+  line-height: 24px;
+}
+
+.card-collection {
+  width: 1248px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10%;
+}
+
+.advertising-content {
+  height: 220px;
+  width: 812px;
+  background: #000000;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+  border-radius: 8px;
+  background-image: linear-gradient(234deg, rgba(0, 0, 239, 0.10) 0%, #0000EF 100%);
+  margin-right: 20px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  .advertising-img {
+    height: 220px;
+    width: 812px;
+  }
+  .advertising-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+}
+.advertising-content > .next-slick {
+  width: 100%;
+  height: 100%;
+  .next-slick-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+.single-card {
+  margin-left: 100px
+}

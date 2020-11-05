@@ -1,0 +1,246 @@
+.bg-color {
+  background: no-repeat;
+  background-position: top right;
+  background-image: url(../../assets/bg.png);
+  background-size: 60% 70%;
+
+  background-color: #f3f3f3;
+}
+
+.head-part {
+  padding-top: 200px;
+  display: flex;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.first-part {
+  width: 820px;
+  text-align: right;
+}
+
+.second-login {
+  margin-left: 70px;
+  width: 550px;
+  padding-top: 20px;
+}
+
+.server-icon {
+  float: right;
+  height: 34px;
+}
+
+.server-father::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.server-father {
+  margin-bottom: 2px;
+}
+
+.sign-desc {
+  height: 18px;
+  opacity: 0.87;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #000000;
+  letter-spacing: 0.4px;
+  text-align: left;
+  line-height: 18px !important;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.title-desc {
+  height: 34px;
+  font-family: TrebuchetMS-Bold;
+  font-size: 15px;
+  color: #000000;
+  letter-spacing: 0;
+  text-align: right;
+  line-height: 17px;
+}
+
+.login-language {
+  display: flex;
+  height: 30px;
+  align-items: center;
+}
+
+.desc-part {
+  height: 48px;
+  font-family: AlibabaPuHuiTi-Light;
+  font-size: 34px;
+  color: #000000;
+  letter-spacing: 0.25px;
+  text-align: right;
+  line-height: 48px;
+  font-weight: 300;
+}
+.enter-appcenter {
+  font-size: 14px;
+}
+.sign-login {
+  cursor: pointer;
+  height: 18px;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #595959;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-right: 20px;
+}
+
+.switch-language {
+  margin-left: auto !important;
+}
+
+.sign-login:hover {
+  color: #3328ff;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.english-part {
+  width: 30px;
+  color: #4a4a4a;
+  border: none;
+  border-radius: 4px;
+  background-color: #F3F3F3;
+}
+
+.chinese-part {
+  width: 30px;
+  color: #4a4a4a;
+}
+
+.is-sign {
+  color: #0000ef;
+  font-family: Helvetica-Bold;
+  border-bottom: 2px #0000ef solid;
+  padding-bottom: 6px;
+}
+
+.is-log {
+  height: 36px !important;
+  width: 35%;
+  color: #ffffff;
+  letter-spacing: 0.4px;
+  background-image: linear-gradient(234deg, rgba(0, 0, 239, 0.1) 0%, #0000ef 100%);
+  border-radius: 4px;
+}
+
+.is-log:hover {
+  background-image: linear-gradient(234deg, rgba(0, 0, 239, 0.1) 0%, #0000ef 100%);
+  box-shadow: 0 6px 12px 0 rgba(51, 40, 255, 0.3);
+  border-radius: 4px;
+}
+
+.is-log:active {
+  background-image: linear-gradient(234deg, rgba(0, 0, 239, 0.1) 0%, #0000ef 100%);
+  box-shadow: 0 2px 4px 0 rgba(51, 40, 255, 0.3);
+  border-radius: 4px;
+}
+
+.login-sign-content {
+  height: 20px;
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0.4px;
+  line-height: 20px;
+}
+
+.is-sign-button {
+  margin-top: 20px;
+}
+
+.login-head {
+  margin-top: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-style {
+  height: 18px;
+  opacity: 0.87;
+  font-family: PingFangSC-Regular;
+  color: #0000ef;
+  letter-spacing: 0.4px;
+  text-align: right;
+  line-height: 18px;
+  float: right;
+  padding-top: 7px;
+  margin-right: 0.4px;
+}
+
+.server-item {
+  font-family: PingFangSC-Regular;
+  color: #0000ef;
+  letter-spacing: 0.4px;
+  margin-left: 4px;
+}
+
+.footer-part {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%);
+  height: 20px;
+  opacity: 0.87;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #000000;
+  letter-spacing: 0.34px;
+  line-height: 20px;
+}
+
+.check-desc {
+  display: flex;
+  margin-top: 24px !important;
+  margin-left: 12px;
+  font-family: PingFangSC-Regular;
+  color: #000000;
+}
+
+.check-item {
+  margin-right: 12px;
+}
+
+.login-input-part {
+  height: 36px !important;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: #ffffff;
+  vertical-align: center;
+  line-height: 36px;
+}
+
+.safe-desc {
+  height: 20px;
+  width: 300px;
+  opacity: 0.87;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #000000;
+  letter-spacing: 0.34px;
+  text-align: left;
+  line-height: 20px;
+  margin-bottom: 60px;
+}
+
+.reset-has-url {
+  height: 120px;
+  width: 300px;
+  background: #4a4a4a;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #4a4a4a;
+}
