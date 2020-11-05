@@ -1,6 +1,7 @@
 export function getLanguage() {
-  const lang = navigator.language || navigator.userLanguage;
-  return localStorage.getItem('lang') || lang ;
+  const lang = navigator.language || navigator.userLanguage || '';
+
+  return localStorage.getItem('lang') || lang.split('-')[0];
 }
 
 export function bindScroll(elem) {
