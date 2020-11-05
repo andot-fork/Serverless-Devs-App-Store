@@ -1,5 +1,5 @@
 
-<div><a href="https://www.serverless-devs.com/#/home"  target="_blank" style="display:flex"> <img src="https://images.serverlessfans.com/devs-github/app1.jpg" width="25%"/> <img src="https://images.serverlessfans.com/devs-github/app2.jpg" width="25%"/> <img src="https://images.serverlessfans.com/devs-github/app3.jpg" width="25%"/> <img src="https://images.serverlessfans.com/devs-github/app4.jpg" width="25%"/> </a></div>
+<a href="https://www.serverless-devs.com/#/home"  target="_blank" ><span style="display:flex;width:100%"> <img src="https://images.serverlessfans.com/devs-github/app1.jpg" width="25%"/> <img src="https://images.serverlessfans.com/devs-github/app2.jpg" width="25%"/> <img src="https://images.serverlessfans.com/devs-github/app3.jpg" width="25%"/> <img src="https://images.serverlessfans.com/devs-github/app4.jpg" width="25%"/> </span></a>
 
 
 <p align="center">
