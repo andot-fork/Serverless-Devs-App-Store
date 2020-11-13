@@ -134,7 +134,7 @@ class ProjectPannel extends React.Component {
       params
     });
     const originInformation = JSON.parse(_.get(result, 'data.Response.Information', '{}'));
-    console.log(originInformation,'originInformation');
+    console.log(originInformation, 'originInformation');
     const configData = _.get(originInformation, 'Properties', {});
     this.setState({
       configData
@@ -218,48 +218,66 @@ class ProjectPannel extends React.Component {
               disabled
             />
           </FormItem>
-          <FormItem
-            {...FOTM_ITEM_LAYOUT}
-            label={<Translation>Provider</Translation>}
-            labelTextAlign='left'
-            required
-          >
-            <Select
-              style={{ width: '100%' }}
-              dataSource={providerList}
-              {...init('Provider', {
-                rules: [{ required: true }]
-              })}
-            />
-          </FormItem>
-          <FormItem
-            {...FOTM_ITEM_LAYOUT}
-            label={<span><Translation>Access</Translation><CommonBalloon content={<Translation>AccessDess</Translation>}>
-            <Icon type="help" />
-          </CommonBalloon></span>}
-            labelTextAlign='left'
-            required
-            style={{ position: 'relative' }}
-          >
-            <Select
-              style={{ width: '100%' }}
-              dataSource={accessList}
-              {...init('Access', { rules: [{ required: true }] })}
-            />
-            <Button
-              type='primary'
-              style={{ position: 'absolute', marginLeft: 5, zIndex: 2 }}
-              onClick={this.openToAddConfig}
+
+          <If condition={projectName === 'Global'}>
+            {Object.keys(data).map((key) => <FormItem
+              {...FOTM_ITEM_LAYOUT}
+              label={<Translation>{key}</Translation>}
+              labelTextAlign='left'
+              hasFeedback
+              required
             >
-              <Icon type='add' /><Translation>Add more verification</Translation>
-						</Button>
-          </FormItem>
-          <FormField
-            configData={configData}
-            configValue={configValue}
-            field={this.field}
-            hideUnRequiredForm={hideUnRequiredForm}
-          />
+              <Input
+                htmlType={Object.prototype.toString.call(data[key]) === '[object Number]' ? 'number' : 'text'}
+                {...init(key, { initValue: data[key], rules: [{ required: true }] })}
+              />
+            </FormItem>)}
+          </If>
+          <If condition={projectName !== 'Global'}>
+            <FormItem
+              {...FOTM_ITEM_LAYOUT}
+              label={<Translation>Provider</Translation>}
+              labelTextAlign='left'
+              required
+            >
+              <Select
+                style={{ width: '100%' }}
+                dataSource={providerList}
+                {...init('Provider', {
+                  rules: [{ required: true }]
+                })}
+              />
+            </FormItem>
+            <FormItem
+              {...FOTM_ITEM_LAYOUT}
+              label={<span><Translation>Access</Translation><CommonBalloon content={<Translation>AccessDess</Translation>}>
+                <Icon type="help" />
+              </CommonBalloon></span>}
+              labelTextAlign='left'
+              required
+              style={{ position: 'relative' }}
+            >
+              <Select
+                style={{ width: '100%' }}
+                dataSource={accessList}
+                {...init('Access', { rules: [{ required: true }] })}
+              />
+              <Button
+                type='primary'
+                style={{ position: 'absolute', marginLeft: 5, zIndex: 2 }}
+                onClick={this.openToAddConfig}
+              >
+                <Icon type='add' /><Translation>Add more verification</Translation>
+              </Button>
+            </FormItem>
+            <FormField
+              configData={configData}
+              configValue={configValue}
+              field={this.field}
+              hideUnRequiredForm={hideUnRequiredForm}
+            />
+          </If>
+
         </Form>
         <AccessConfig ref={(ref) => (this.accessConfig = ref)} refreshGuiObj={this.refreshGuiObj} />
       </div>

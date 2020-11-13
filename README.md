@@ -8,11 +8,11 @@
 </p>
 
 # Serverless Devs Gui
-对开发者而言 Serverless Devs Gui 不仅仅是一款实用的Serverless 应用本地开发部署工具，同时也是一套极简的桌面应用开发框架。你可以直接使用它的能力完成Serverless 应用的构建和部署，也可以基于这套框架，快速完成跨平台桌面应用的，开发，构建及分发。[详细说明](docs/detail.md).
+对开发者而言 Serverless Devs Gui 不仅仅是一款实用的Serverless 应用本地开发部署工具，同时也是一套极简的桌面应用开发框架。你可以直接使用它的能力完成Serverless 应用的构建和部署，也可以基于这套框架，快速完成跨平台桌面应用的开发，构建以及分发工作。[详细说明](docs/detail.md).
 
 
 ## 快速开始
-确保安装node环境版本大于v10，项目所依赖的electron本身提及较大，国内用户推荐使用cnpm 镜像仓库
+确保安装node环境版本大于v10，项目所依赖的electron本身体积较大，国内用户推荐使用cnpm 镜像仓库
 cnpm 安装方式
 ```
 $ npm install -g cnpm --registry=https://registry.npm.taobao.org

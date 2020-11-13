@@ -34,6 +34,7 @@ class AppCenter {
           const _content = data.toString();
           content += _content;
           content =  convert.toHtml(content)
+
           // content = content.replace(NORMAL_REG, '');
           event.reply('open-file-dialog-reply', { status: 2, result: content, name, type });
         });

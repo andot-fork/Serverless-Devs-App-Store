@@ -176,6 +176,7 @@ class FormField extends React.Component {
               renderServiceForm={renderServiceForm}
               field={field}
               fullKey={fullKey}
+              initValue={configValue[fullKey]}
             />
           </div>
         </div>

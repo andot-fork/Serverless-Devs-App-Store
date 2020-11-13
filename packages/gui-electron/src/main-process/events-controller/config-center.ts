@@ -26,15 +26,25 @@ class ConfigCenter {
         const s = spawn('s', ['deploy'], { cwd: downloadFilePath, shell: true, serialization: 'advanced' });
         let content = '';
         s.stdout.on('data', (data) => {
-          const _content = data.toString();
+          let _content = data.toString().replaceAll(' ','&nbsp;&nbsp;');
+          _content = convert.toHtml(_content);
+          if (_content.indexOf('span') === -1) {
+            let content_arr = _content.split('\n');
+            let new_content = '';
+            content_arr.forEach(value => {
+              new_content += `<span>${value}</span>`
+            });
+            _content = new_content;
+          }
           content += _content;
-          content = convert.toHtml(content);// content.replace(NORMAL_REG, '');
+          // content = convert.toHtml(content);// content.replace(NORMAL_REG, '');
 
           event.reply('config-center-initiate-reply', { status: 2, content });
         });
         s.stderr.on('data', (data) => {
           const _content = data.toString();
           content += _content;
+
           content = convert.toHtml(content); // content.replace(NORMAL_REG, '');
           event.reply('config-center-initiate-reply', { status: 4, content });
         });

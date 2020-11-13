@@ -15,6 +15,18 @@ class ComplexFormStruct extends React.Component {
     };
   }
 
+  componentDidMount() {
+    let initValue = [];
+    try {
+      initValue = JSON.parse(this.props.initValue);
+    } catch (e) {
+
+    }
+    if (initValue.length > 0) {
+      const groupList = initValue.map((data, i) => ({ id: `${generateNum()}${i}` }));
+      this.setState({ groupList });
+    }
+  }
   removeGroup = (id) => {
     const { groupList } = this.state;
     if (groupList.length === 1) {

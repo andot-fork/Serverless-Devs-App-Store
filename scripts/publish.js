@@ -57,7 +57,7 @@ async function getPlatformUrl() {
 async function publish() {
   await init();
   const platform_map = await getPlatformUrl();
-  const version = process.argv[2] || moment().format('YYYYMMDDhhmmss').toString();
+  const version = moment().format('YYYYMMDDhhmmss').toString();
   await buildBrowser();
   const electron_build_path = mergeToElectronLib(version);
   const all_paltform_path = PLATFORM_TYPE.filter((platform) => platform_map[platform]).map((platform) => {
@@ -83,14 +83,14 @@ async function publish() {
   await Promise.all(uploadExcute);
   await createVersion({
     "zh": [
-      "Mac新版本发布 增加登录/注册入口，优化详情描述信息展示",
-      "Windows新版本发布 增加登录/注册入口，优化详情描述信息展示",
-      "Linux 新版本发布 增加登录/注册入口，优化详情描述信息展示",
+      "Mac新版本发布 修复执行展示结果",
+      "Windows新版本发布 修复执行展示结果",
+      "Linux 新版本发布 修复执行展示结果",
     ],
     "en": [
-      "Publish MacOS client, Add login/register entry, optimize the display of detailed description information",
-      "Publish Windows client, Add login/register entry, optimize the display of detailed description information",
-      "Publish Linux client,Add login/register entry, optimize the display of detailed description information"
+      "Publish MacOS client,",
+      "Publish Windows client",
+      "Publish Linux client"
     ]
   });
 }

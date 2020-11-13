@@ -10,7 +10,7 @@ import Translation from "../../../components/Translation";
 import CodeBlock from "../../../components/CodeBlock";
 import HeaderBlock from "../../../components/HeaderBlock";
 import MarkdownOutline from "../../../components/MarkdownOutline";
-
+import { getParams } from '../../../utils/common';
 
 class ComponentContent extends React.Component {
   constructor(props) {
@@ -23,16 +23,17 @@ class ComponentContent extends React.Component {
   }
 
   async componentDidMount() {
-    const data = _.get(this.props, "history.location.state", {});
+    const id = getParams('id') || {};
     let readme = "";
     let version = "";
+    let data = {};
     try {
-      const { name, type, provider } = data;
-      const result = await this.getComponentData({ name, type, provider });
+
+      const result = await this.getComponentData({ id });
       const information = JSON.parse(result.Information);
       readme = result.Readme;
-      // const markdownArray = _.get(markdownParse.parse(readme), "children", []);
       version = information.Version;
+      data = result;
     } catch (e) {
       console.log(e.message);
     }
@@ -43,6 +44,7 @@ class ComponentContent extends React.Component {
       version,
     });
   }
+
 
   getComponentData = async (params) => {
     const result = await request({
@@ -104,7 +106,7 @@ class ComponentContent extends React.Component {
                 className="update-time-download"
                 style={{ marginRight: "21px" }}
               >
-                update {publish_time}
+                <Translation>update</Translation>  {publish_time}
               </span>
               <img
                 src={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB5klEQVRYR+2WsU7DMBCGYzdS1eQBiuAlgJkJFiYCDJHdpSwICVhZK1GJRwCJDZbEigQoGxMbK+IBmIH2ATo1NjoUIxMcu01VdSBZMti+//N/vrORs+APLVjfqQFmdoAxFgghrvNUvsFfCDHEGH9gjO/CMHwypXkiABAhhKS6QEmSbGZZFuXCbXUOxviKEHIyEwBjrMc5P0cI3VJKD0zBkiRZzbLsUYF56HQ6+5UBpLgMYNpRmqbLo9HoRQjRBlghRBch9Ewp3agEoOx8gBA6gjxDcB1EURyciqJIVAZQxRuNxnYYhq+qiAqhE4cd5wADSunSVA7oxGUAmWPpRKvVulBtV89IHMefsG4qAJO4DgIhNJA5Lx5QqBxYU1Y9Mt5PGU4iXgJhrQ5rCkzistF4nrceBMG7CsE5P7TVue2uQbadM8YuOefHrutu2bqaTUw3juRhkae9OGnuAHCym83mULVXhZg7gM02EwDAc853CCF9W5yycetlZAKI4/gGWq7rumvQrIoi0KTKnP1ThmWEVQHkOt/3V0wQ3w6AlePxuOf7/mlxclWAKIruHcfZK3PnlwNSBGO8W+xcNUDtwP9wIH/Z9j3PCzVlCM/us7IxznlX9/CEW7RsTO051k5YtcVOuq4GWLgDXxkOQj+/THUZAAAAAElFTkSuQmCC`}
@@ -118,13 +120,15 @@ class ComponentContent extends React.Component {
               >
                 {download_count || "0"}
               </span>
-              <ul className="tag-display">
-                {tags.map((item, index) => (
-                  <li key={index} className="tag-background">
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <If condition={tags !== ''}>
+                <ul className="tag-display">
+                  {tags.map((item, index) => (
+                    <li key={index} className="tag-background">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </If>
             </div>
             <div className="deploy-button">
               <If condition={!window.isBrowser}>
@@ -178,7 +182,7 @@ class ComponentContent extends React.Component {
                 <div className="label-width">
                   <Translation>Homepage</Translation>
                 </div>
-                <span className="label-desc a-tag" onClick={() => window.openExternal && window.openExternal(homepage)}>{homepage}</span>
+                <span className="label-desc a-tag" onClick={() => window.openExternal ? window.openExternal(homepage) : window.open(homepage)}>{homepage}</span>
               </div>
             </div>
             <div className="mid-hr"></div>

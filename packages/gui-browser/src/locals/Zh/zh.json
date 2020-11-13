@@ -70,5 +70,6 @@
   "Configuration file already exists": "已经存在配置文件",
   "The configuration file already exists, please configure it directly": "配置文件已经存在,请直接配置",
   "Cloud vendor secret key setting guidelines": "云厂商秘钥设置指引",
-  "Click to enter the application center": "点击进入应用中心"
+  "Click to enter the application center": "点击进入应用中心",
+  "update": "更新"
 }

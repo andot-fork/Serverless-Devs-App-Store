@@ -64,6 +64,7 @@ class CardPart extends React.Component {
             <Link
               to={{
                 pathname: "component-detail",
+                search: `id=${cardData.id}`,
                 state: cardData,
               }}
             >
@@ -192,9 +193,9 @@ class ApplicationCenter extends React.Component {
     });
   };
 
-  componentDidCache = () => {};
+  componentDidCache = () => { };
 
-  componentDidRecover = () => {};
+  componentDidRecover = () => { };
 
   search = async (params = {}) => {
     this.setState({
@@ -307,12 +308,13 @@ class ApplicationCenter extends React.Component {
       banner,
     } = this.state;
     const { history } = this.props;
-    const bannerNodes = banner.map((item, index) => (
-      <div key={index} className="advertising-wrapper">
+    const bannerNodes = banner.map((item, index) => {
+      const packageData = _.get(item, 'package', {});
+      return <div key={index} className="advertising-wrapper">
         <Link
           to={{
-            pathname: "component-detail",
-            search: `name=${item.package.name}&type=${item.package.type}&provider=${item.package.provider}`,
+            pathname: `component-detail`,
+            search: `id=${packageData.id}`,
             state: item.package,
           }}
         >
@@ -324,7 +326,7 @@ class ApplicationCenter extends React.Component {
           />
         </Link>
       </div>
-    ));
+    });
 
     return (
       <div className="application-center">

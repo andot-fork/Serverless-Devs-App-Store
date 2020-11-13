@@ -69,5 +69,6 @@
   "Configuration file already exists": "Configuration file already exists",
   "The configuration file already exists, please configure it directly": "The configuration file already exists, please configure it directly",
   "Cloud vendor secret key setting guidelines": "Cloud vendor secret key setting guidelines",
-  "Click to enter the application center": "Click to enter the application center"
+  "Click to enter the application center": "Click to enter the application center",
+  "update": "update"
 }

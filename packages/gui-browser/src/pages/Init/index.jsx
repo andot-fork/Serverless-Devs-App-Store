@@ -120,12 +120,14 @@ class InitData extends React.Component {
     const Access = data.Access;
     const Provider = data.Provider;
     delete data.ProjectName;
-    delete data.Access;
-    delete data.Provider;
-    if (templateObj[projectName]) {
+    if (templateObj[projectName] && projectName !== 'Global') {
+      delete data.Access;
+      delete data.Provider;
       templateObj[projectName].Properties = data;
       templateObj[projectName].Access = Access || "";
       templateObj[projectName].Provider = Provider || "";
+    } else if (templateObj[projectName] && projectName === 'Global') {
+      templateObj[projectName] = data;
     }
     const configValue = yaml.dump(templateObj);
     this.setState({
